@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="basicPadding"> 7.5dp </dimen>
+    <dimen name="basicMargin"> 5dp </dimen>
+    <dimen name="btn_text"> 15sp </dimen>
+</resources>

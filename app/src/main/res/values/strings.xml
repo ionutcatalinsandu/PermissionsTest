@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">PermissionsTest</string>
+    <string name="btn_poza"> Fa o poza! </string>
+    <string name="btn_salveaza"> Salveaza aceasta poza </string>
+</resources>
