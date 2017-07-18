@@ -61,13 +61,13 @@ public class PermissionsTest extends AppCompatActivity
 
 
 
+
     private File createImagineFile() throws IOException {
         String timeStamp = new SimpleDateFormat("ddMMyyyy_HHmmss").format(new Date());
         String fileName = "JPEG_" + timeStamp + "_";
         File storageDir = getExternalFilesDir(Environment.DIRECTORY_PICTURES);
         File image = File.createTempFile(fileName, ".jpeg", storageDir);
         fileAbsolutePath = image.getAbsolutePath();
-
         return image;
     }
 
@@ -77,7 +77,9 @@ public class PermissionsTest extends AppCompatActivity
         setContentView(R.layout.activity_permissions_test);
 
         Button buttonPoza = (Button) findViewById(R.id.btn_pic);
-        Button buttonSalveza = (Button) findViewById(R.id.btn_save); // ???
+        Button buttonSalveza = (Button) findViewById(R.id.btn_save);
+        Button buttonShare = (Button) findViewById(R.id.btn_share);
+
         imagineView = (ImageView)findViewById(R.id.imagine);
 
         googleApiClient = new GoogleApiClient.Builder(this).enableAutoManage(this, this).
@@ -128,6 +130,18 @@ public class PermissionsTest extends AppCompatActivity
                 fragmentTransaction.add(R.id.frame, mapFragment );
                 fragmentTransaction.commit();
                 mapFragment.getMapAsync(PermissionsTest.this);
+            }
+        });
+
+
+        buttonShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("image/*");
+                final File photoFile  =  new File(fileAbsolutePath);
+                shareIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(photoFile));
+                startActivity(Intent.createChooser(shareIntent, "Share this using.. ?"));
             }
         });
 

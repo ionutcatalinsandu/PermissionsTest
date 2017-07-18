@@ -10,5 +10,6 @@ public class Strings {
     public static final int STORAGE_READ_REQUEST  = 3;
     public static final int CAMERA_APP_REQUEST = 4;
     public static final int COMBO_REQUEST = 5;
+    public static final String IMG_SHARE_TAG = "IMG";
 
 }
