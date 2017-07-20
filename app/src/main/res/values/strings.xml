@@ -3,4 +3,9 @@
     <string name="btn_poza"> Fa o poza! </string>
     <string name="btn_salveaza"> Arata harta! </string>
     <string name="btn_share"> Share this! </string>
+    <string name="btn_login">Log in!</string>
+    <string name="btn_saveUser"> Register! </string>
+    <string name="facebook_app_id">268170927001718</string>
+    <string name="fb_login_protocol_scheme">fb268170927001718</string>
+
 </resources>

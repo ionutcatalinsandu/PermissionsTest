@@ -46,6 +46,8 @@
             android:id="@+id/btn_share"/>
     </LinearLayout>
 
+
+
     <FrameLayout
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -53,8 +55,56 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/butoane"
-        app:layout_constraintTop_toBottomOf="@+id/imagine"
+        app:layout_constraintTop_toBottomOf="@+id/frame2"
         android:id="@+id/frame" >
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/frame"
+        app:layout_constraintVertical_weight="2"
+        android:id="@+id/frame2"
+        app:layout_constraintTop_toBottomOf="@+id/imagine">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/currentUser"
+                android:layout_weight="1"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/userEdit"
+                android:inputType="text"
+                android:layout_weight="2"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/passwordEdit"
+                android:inputType="textPassword"
+                android:layout_weight="2"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/btn_login"
+                android:layout_weight="2"
+                android:id="@+id/btn_logIn"/>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:text="@string/btn_saveUser"
+                android:layout_weight="2"
+                android:id="@+id/btn_registerUser"/>
+        </LinearLayout>
+
     </FrameLayout>
 
     <ImageView
@@ -64,7 +114,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@+id/frame"
+        app:layout_constraintBottom_toTopOf="@+id/frame2"
         android:id="@+id/imagine"
         android:layout_margin="@dimen/basicMargin"
         android:padding="@dimen/basicPadding" />
